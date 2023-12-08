@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3C6255;
+        }
+
+        h1, h2, p {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: b8c1ec;
+            padding: 10px;
+            float: right;
+            gap: 4rem;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;  
+        }
+
+        h1 {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #EAE7B1;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #b8c1ec;  
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #fffffe; 
+            text-align: justify;
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            padding: 20px; 
+            text-align: center;
+        }
+
+        .boxes-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .box {
+            width: 48%;
+            border: 2px solid #61876E;
+            padding: 20px;
+            margin: 10px;
+            background-color: #61876E;
+        }
+
+        .social-buttons {
+            margin-top: auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .card-container {
+            display:flex;
+        }
+
+        .card {
+            width: 400px;
+            height: 500px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            margin: 0 20px;
+            margin-top: 100px;
+            margin-left: 100px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            transition: bottom 0.5s;
+        }
+
+        .card:hover .card-info {
+            bottom: -100%;
+        }
+
+        footer {
+            background-color: #4F6F52;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="IT111Blog.html">IT111 Blog</a>
+            <a href="FlexPage.html">Flex Page</a>
+        </nav>
+    </header>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\infographics.jpg" alt="Card image">
+            <div class="card-info">
+                <h3>Inforgraphics Activity</h3>
+                <p>This was the first group activity we did. 
+                    <br> This infographic was created in line 
+                    <br> with our first lesson, "What is Computing?"</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\cybercrime.png" alt="Card image">
+            <div class="card-info">
+                <h3>Famous Cybercrime Case</h3>
+                <p>This was our second homework as a group.
+                    <br> This homework interests me since it has 
+                    <br> taught me about the history of the "I LOVE YOU" virus.</p>
+            </div>
+        </div>
+    </div>
+
+        <div class="boxes-container">
+            <div class="box">
+            <h1>Learnings every Lesson</h1>
+            <br> 
+            <p> Chapter 1: What is Computing? 
+                -In this lesson, I have learned that computing is about using machines to process information. 
+                Computing can also have an impact on different industries. 
+                I've also learned about the development of computers from the mechanical era to the PC and VLSI era.
+            </p>
+            <p> Chapter 2: Professions and Careers in Computing 
+                -In this lesson, I have learned that there are a lot of professions related to this course. 
+                These professions or career can be categorized into 8 groups: programming and software development, information systems operation, and management, telecommunications and networking, computer science research, graphics, andmultimedia, web, and internet, and training and support
+            </p>
+            <p> Chapter 3: Information Processing Cycle 
+                -In this lesson, I have learned that the information processing cycle refers to the order of events that go into processing information, including input, processing, storage, and out. 
+                I have also discovered that there is a difference between data and information. 
+                Data is the representation of facts and concepts in a formalized manner suitable for communication. 
+                While information is organized data that has a meaningful meaning to the receiver,
+            </p>
+            <p> Chapter 4: Computer Systems
+                -In this lesson, I have learned that a computer system is a systematic interaction between entities, procedures, and activities.
+                 Moreover, there are 4 computer components: software, hardware, dataware, and peopleware. </p>
+            <p> Chapter 5: Concept of Computer Security
+                -In this lesson, I have learned the basic concepts of computer security, classifying information, cyberattack countermeasures, the different types of cybercrimes, and cybercriminals. 
+                Moreover, I have discovered that there are many different kinds of hackers—some good, some bad. </p>
+            <p> Chapter 6: HTML and CSS 
+                -In this lesson, I have learned how to code HTML and CSS with the guidance of our instructor, especially by efficiently teaching the HTML tags and CSS syntax. 
+                I've also learned how to create a wireframe and a mockup for a website.
+             </p>
+            </div>
+
+            <div class="box">
+            <h1>Favorite Lesson</h1>
+            <br> 
+            <p>My favorite lesson is HTML and CSS because it is interactive and engaging.
+                These technologies are indeed fundamental to web development, providing the essential tools for creating the structure, content, and visual style of websites. 
+                However, I find the CSS confusing because I have trouble making adjustments and struggle to understand some of its technical terms.
+            </p>
+            </div>
+        </div>
+
+
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/katesuazo.castro">
+             <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+        </a>
+            <a href="https://www.instagram.com/kateyeng/">
+            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+        </a>
+            <a href="https://twitter.com/k8lysz">
+            <img src="https://img.icons8.com/fluency/48/000000/twitter.png"/>
+            </a>
+    </div>
+
+    <footer>
+        &copy; Kate Alysabelle S. Castro 2023. All rights reserved.
+    </footer>
+    
+</html>

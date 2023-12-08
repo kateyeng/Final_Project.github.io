@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Webpage Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #3C6255;
+        }
+
+        header {
+            font-size: 20px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        h1, h2, p {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.6;
+            color: #A6BB8D; 
+            text-align: justify;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: b8c1ec;
+            padding: 10px;
+            float: right;
+            gap: 4rem;
+        }
+
+        nav a {
+            float: right;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;  
+        }
+
+        .slider-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            padding: 10px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .prev:hover, .next:hover {
+            opacity: 1;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 130px;
+
+        }
+
+        .social-buttons {
+            margin-top: auto;
+            text-align: center;
+            padding: 10px;
+        }
+
+        footer {
+            background-color: #4F6F52;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        } 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="IT111Blog.html">IT111 Blog</a>
+            <a href="FlexPage.html">Flex Page</a>
+        </nav>
+    </header>
+    <div class="title"> 
+        <h1> Achievements </h1>
+    </div>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic1.PNG"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic2.PNG"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic3.jpg"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic4.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic5.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic6.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic7.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic8.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic9.png"></div>
+            <div class="slide"><img src="C:\Users\Kate Castro\OneDrive\Documents\BS-IT 1D\WEBSITE HTML\img\ic10.png"></div>
+        </div>
+    
+        <button class="prev" onclick="prevSlide">&#10094;</button>
+        <button class="next" onclick="nextSlide">&#10095;</button>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/katesuazo.castro">
+             <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png"/>
+        </a>
+        <a href="https://www.instagram.com/kateyeng/">
+            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/>
+        </a>
+        <a href="https://twitter.com/k8lysz">
+            <img src="https://img.icons8.com/fluency/48/000000/twitter.png"/>
+        </a>
+    </div>
+
+    <footer>
+        &copy; Kate Alysabelle S. Castro 2023. All rights reserved.
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slider');
+        const totalSlides = document.querySelectorAll('.slide').length;
+    
+        function showSlide(index) {
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+    
+            slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+        }
+    
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+    
+        setInterval(() => nextSlide(), 3000);
+    </script>
+</body>
+</html>
